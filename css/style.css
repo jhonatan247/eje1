@@ -673,9 +673,9 @@ p a{
   .menu ul {
     padding: 0;
   }
-  .background {
+  /*.background {
     background-image: url('../images/background-medium.png');
-  }
+  }*/
   .background .fondo{
     background:rgba(0,0,0,.3);
   }
@@ -774,11 +774,11 @@ p a{
   .col2 {
     align-items: stretch;
   }
-  .background {
+  /*.background {
     background-image: url('../images/background-min.png');
-  }
+  }*/
   .background .fondo{
-    background:rgba(0,0,0,.5);
+    background:rgba(0,0,0,.4);
   }
   .banner-1 h1{
     font-size: 25px;

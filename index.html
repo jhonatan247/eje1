@@ -126,9 +126,7 @@
     </section>
 
     <section class="seccion contenedor" id="gracias">
-      <h2>Gracias por tu visita</h2>
-      <p>Divi&eacutertete con tu mascota en este grandioso juego.</p>
-      <table style=" width:100%;  text-align: center;" cellspacing="0" cellpadding="0"><tr ><td style="font-family:verdana; font-size:11px; ;  "><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="80%" height="100%"><param name="movie" value="http://www.games68.com/games/54733fb069718.swf"><param name="quality" value="high"></param><param name="menu" value="false"></param><embed src="http://www.games68.com/games/54733fb069718.swf" width="640" height="480" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" menu="false" ></embed></object></td></tr></table>
+      <h2>Gracias por tu visita <i class="fa fa-heart" aria-hidden="true"></i></h2>
     </section>
     <footer class="footer">
       <div class="fondo">
@@ -201,10 +199,10 @@
 
       function mediaQuery() {
         if (consulta.matches) {
-          $burguerButton.addEventListener('touchstart', toggleMenu);
+          //$burguerButton.addEventListener('touchstart', toggleMenu);
           $burguerButton.addEventListener('click', toggleMenu);
         } else {
-          $burguerButton.removeEventListener('touchstart', toggleMenu);
+          //$burguerButton.removeEventListener('touchstart', toggleMenu);
           $burguerButton.removeEventListener('click', toggleMenu);
         }
       }
@@ -230,13 +228,6 @@
         window.location="index.html";
         console.log('ejecutado');
       } 
-    </script>
-    <script>
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || /windows phone/i.test(userAgent)) {
-        getElementById("gracias").style.display = 'none';
-      }
     </script>
   </body>
 </html>
