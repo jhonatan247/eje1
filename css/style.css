@@ -90,6 +90,7 @@ input:focus, textarea:focus {
 }
 .background .fondo{
     padding: 20px;
+    background:rgba(0,0,0,.3);
 }
 
 .button {
@@ -673,12 +674,12 @@ p a{
   .menu ul {
     padding: 0;
   }
-  /*.background {
+  .background {
     background-image: url('../images/background-medium.png');
-  }*/
-  .background .fondo{
-    background:rgba(0,0,0,.3);
   }
+  /*.background .fondo{
+    background:rgba(0,0,0,.3);
+  }*/
   .banner-1{
     background: url(../images/center-background-medium.png);
     background-size: cover;
@@ -774,12 +775,12 @@ p a{
   .col2 {
     align-items: stretch;
   }
-  /*.background {
+  .background {
     background-image: url('../images/background-min.png');
-  }*/
-  .background .fondo{
-    background:rgba(0,0,0,.4);
   }
+  /*.background .fondo{
+    background:rgba(0,0,0,.4);
+  }*/
   .banner-1 h1{
     font-size: 25px;
     padding-top: 6.5em;
