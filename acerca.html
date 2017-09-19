@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saurus - Acerca de</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" href="images/icons/Icono.ico">
+    <link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  </head>
+  <body class="Acerca">
+    <div class="red">
+      <div id="facebook"><a href="https://www.facebook.com" target="_blank" target="none" class="fa fa-facebook"></a></div>
+      <div id="youtube"><a href="https://www.youtube.com" target="_blank" class="fa fa-youtube-play"></a></div>
+      <div id="twitter"><a href="https://www.twiter.com" target="_blank" class="fa fa-twitter"></a></div>
+      <div id="correo"><a href="https://www.gmail.com" target="_blank" class="fa fa-envelope"></a></div>
+    </div>
+        <header id="header" class="header background"> <!-- header -->
+
+        <div class="fondo">
+          <div class="contenedor">
+            <figure class="logotipo"> <!-- logotipo -->
+              <img id="logo" src="images/logo.png" width="186" height="60" alt="logotipo"/>
+            </figure>
+            <span class="burguer-button icon-menu" id="burguer-button"></span>
+            <nav class="menu" id="menu"> <!-- menu -->
+                <ul>
+                  <li>
+                    <a href="index.html#dinosaurios"><i class="fa fa-heart" aria-hidden="true"></i> Especies </a>
+                  </li>
+                  <li>
+                    <a href="precios.html"><i class="fa fa-money" aria-hidden="true"></i> Precios</a>
+                  </li>
+                  <li>
+                    <a href="acerca.html"><i class="fa fa-users" aria-hidden="true"></i> Acerca de</a>
+                  </li>
+                </ul>
+              </nav>
+          </div>
+          </div>
+        </header>
+    <section class="seccion contenedor">
+      <h2>Créditos</h2>
+      <p align="justify">
+        Creado por Jhonatan Torres Forero, estudiante de la Universidad Nacional de Colombia, para la asignatura 'Gr&aacutefica interactiva' en el segundo semestre del año 2017.
+      </p>
+      <h2>Mapa del sitio</h2>
+      <div class="Mapa"></div>
+      <h2>Galer&iacutea</h2>
+      <div class="slider">
+        <div class="slider-1">
+          <img src="images/slides/1.jpg" alt="">
+        </div>
+        <div class="slider-1">
+          <img src="images/slides/2.jpg" alt="">
+        </div>
+        <div class="slider-1">
+          <img src="images/slides/3.jpg" alt="">
+        </div>
+        <div class="slider-1">
+          <img src="images/slides/4.jpg" alt="">
+        </div>
+      </div>
+      <h2><a href="https://goo.gl/esfGHM" target="_blank">Refrencias</a></h2>
+      
+      <div class="QR"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="fondo">
+        <div class="contenedor">
+          <div class="contacto">
+            <img data-src="images/logo-white.png|images/logo-white2x.png" alt="logotipo blanco"/>
+            <a href="tel:+573023366702"><strong>Tel&eacutefono</strong> <span>3023366702</span></a>
+            <a href="mailto:jtorresf@unal.edu.co?Subject=Hello%20again"><strong>E-mail</strong> <span>jtorresf@unal.edu.co</span></a>
+            <a href="#"><strong><span>Subir</span></strong></a>
+          </div>
+          <form class="formulario">
+            <div class="col1">
+              <label for="nombre">Nombre</label>
+              <input type="text" required id="nombre" placeholder="Tu nombre" name="nombre"/>
+              <label for="email">E-mail</label>
+              <input type="email" required id="email" placeholder="Tu correo elctrónico" name="email"/>
+              <div class="sexo">
+                <label for="mujer">
+                  <input type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
+                </label>
+                <label for="hombre">
+                  <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+                </label>
+              </div>
+              <div class="intereses">
+                <label for="cotizacion">
+                  <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion"> Cotizaciones
+                </label>
+                <label for="reclamos">
+                  <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+                </label>
+                <label for="comentarios">
+                  <input type="checkbox" id="comentarios" name="intereses" value="comantarios"> Comentarios
+                </label>
+                <label for="otros">
+                  <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+                </label>
+              </div>
+            </div>
+            <div class="col2">
+              <label for="comentarios">Comentarios</label>
+              <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+              <input type="submit" value="Enviar" class="button"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/502b7294a9.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+    <script>
+      var consulta = window.matchMedia('(max-width: 500px)');
+      consulta.addListener(mediaQuery);
+
+      var $burguerButton = document.getElementById('burguer-button');
+      var $menu = document.getElementById('menu');
+      function toggleMenu(){
+        $menu.classList.toggle('active')
+      };
+      function showMenu(){
+        $menu.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+      };
+
+      function mediaQuery() {
+        if (consulta.matches) {
+          $burguerButton.addEventListener('touchstart', toggleMenu);
+          $burguerButton.addEventListener('click', toggleMenu);
+        } else {
+          $burguerButton.removeEventListener('touchstart', toggleMenu);
+          $burguerButton.removeEventListener('click', toggleMenu);
+        }
+      }
+      mediaQuery();
+
+      // lazy loading
+      var bLazy = new Blazy({
+          selector: 'img'
+      });
+
+      // Gestos touch
+      var $body = document.body;
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
+    </script>
+    <script>
+      var $img = document.getElementById('logo');
+      $img.addEventListener('click', redireccionar);
+      function redireccionar(){
+        window.location="index.html";
+        console.log('ejecutado');
+      } 
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="sss/sss.js"></script>
+  </body>
+</html>
