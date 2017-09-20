@@ -84,8 +84,7 @@ input:focus, textarea:focus {
 }
 
 .background {
-  background-color: #000;
-  background-image: url('../images/background2x.png');
+  background: url('../images/background2x.png');
   background-size: cover;
 }
 .background .fondo{
@@ -423,6 +422,12 @@ p a{
   width: 100%;
   margin: auto;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.servicios{
+  display: flex;
+  flex-direction: column;
 }
 .columnasx3 i{
   padding-right: 20px;
@@ -432,8 +437,6 @@ p a{
   padding-bottom: 20px;
 }
 .columnasx3{
-  width: 33.333%;
-  float: left;
   padding: 20px 20px;
   box-sizing: border-box;
   margin: auto;
@@ -454,17 +457,17 @@ p a{
   width: 33.33%;
   margin-top: 20px;
   background: url(../images/planes_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
 }
 .tablaxd{
   width: 33.33%;
   margin-top: 10px;
   background: url(../images/planes_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .caja-precio{
   border: 1px solid #5c6552;
@@ -675,16 +678,20 @@ p a{
     padding: 0;
   }
   .background {
-    background-image: url('../images/background-medium.png');
+    background: url('../images/background-medium.png');
   }
-  /*.background .fondo{
+  .background .fondo{
     background:rgba(0,0,0,.3);
-  }*/
+  }
   .banner-1{
     background: url(../images/center-background-medium.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+  .contenedor-columnas{
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -776,11 +783,11 @@ p a{
     align-items: stretch;
   }
   .background {
-    background-image: url('../images/background-min.png');
+    background: url('../images/background-min.png');
   }
-  /*.background .fondo{
+  .background .fondo{
     background:rgba(0,0,0,.4);
-  }*/
+  }
   .banner-1 h1{
     font-size: 25px;
     padding-top: 6.5em;
@@ -791,16 +798,13 @@ p a{
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  .columnasx3{
-    width: 100%;
-  }
   .tablax4{
     width: 100%;
   }
   .tablaxd{
     width: 100%;
   }
-  .tabla-planes{¡
+  .tabla-planes{
     display: flex;
     flex-direction: column;
   }
@@ -839,7 +843,7 @@ p a{
     padding: 10px 70px; 
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
+/*@media screen and (-webkit-min-device-pixel-ratio: 2) {
   .background {
     background-image: url('../images/background2x.png');
   }
@@ -853,7 +857,7 @@ p a{
   .background {
     background-image: url('../images/background2x-min.png');
   }
-}
+}*/
 
 video {
   width: 100%;
