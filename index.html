@@ -3,10 +3,11 @@
   <head>
     <title>Saurus - Inicio</title>
     <meta charset="utf-8"/>
-    <link href='https://fonts.googleapis.com/css?family=Bitter|Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="icon" href="images/icons/Icono.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!--Llamado a la hoja de estilos-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--Implementación del favicon-->
+    <link rel="icon" href="images/icons/Icono.ico">
   </head>
   <body>
   <!--Redes sociales-->
@@ -127,7 +128,12 @@
 
     <section class="seccion contenedor" id="gracias">
       <h2>Gracias por tu visita <i class="fa fa-heart" aria-hidden="true"></i></h2>
+      <div class="GIF img_float">
+        <img src="images/gif-gracias.gif" width="100%" height="100%">
+      </div>
     </section>
+
+    <!--Pie de página con formulario de contacto-->
     <footer class="footer">
       <div class="fondo">
         <div class="contenedor">
@@ -175,12 +181,15 @@
         </div>
       </div>
     </footer>
-    <!--Librerias eternas-->
+
+    <!--Librerias exernas-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+
     <!--Iconos-->
     <script src="https://use.fontawesome.com/502b7294a9.js"></script>
-    <!--Menu para moviles-->
+
+    <!--Menu para moviles con gestos de deslizar-->
     <script>
       var consulta = window.matchMedia('(max-width: 500px)');
       consulta.addListener(mediaQuery);
@@ -207,12 +216,10 @@
         }
       }
       mediaQuery();
-
       // lazy loading
       var bLazy = new Blazy({
           selector: 'img'
       });
-
       // Gestos touch
       var $body = document.body;
 
@@ -220,6 +227,7 @@
       gestos.on('swipeleft', hideMenu);
       gestos.on('swiperight', showMenu);
     </script>
+
     <!--Volver a inicio con el logo-->
     <script>
       var $img = document.getElementById('logo');
@@ -229,5 +237,8 @@
         console.log('ejecutado');
       } 
     </script>
+
+    <!--Fuentes-->
+    <link href='https://fonts.googleapis.com/css?family=Bitter|Roboto' rel='stylesheet' type='text/css'>
   </body>
 </html>
